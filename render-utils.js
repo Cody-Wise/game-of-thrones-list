@@ -11,12 +11,12 @@ export function renderHeroes(hero){
 
     heroEl.classList.add('hero');
 
-    nameEl.innerHTML = `<b>Character Name:</b> ${hero.name}`;
+    nameEl.innerHTML = `<b>Character Name:</b> ${hero.character_name}`;
     // birthYearEl.innerHTML = `<b>Birth Year:</b> ${hero.birthyear}`;
     // genderEl.innerHTML = `<b>Gender:</b> ${hero.gender}`;
     // houseNameEl.innerHTML = `<b>House Name: ${hero.house_name}`;
     // descriptionEl.innerHTML = `<b>Character Info:</b> ${hero.description}`;
-    imageEl.src = 'hero.image';
+    imageEl.src = `${hero.image}`;
     a.href = `.detail/?id=${hero.person_id}`;
 
     heroEl.append(nameEl, imageEl);

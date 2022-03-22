@@ -3,7 +3,7 @@
 import { getHeroes } from './fetch-utils.js';
 import { renderHeroes } from './render-utils.js';
 
-const heroListEl = document.querySelector('got-list');
+const heroListEl = document.querySelector('.got-list');
 
 window.addEventListener('load', async () => {
 
@@ -11,7 +11,9 @@ window.addEventListener('load', async () => {
 
     for (let hero of heroes){
 
-      const heroEl = renderHeroes(hero);
+        const heroEl = renderHeroes(hero);
+
+        heroListEl.append(heroEl);
     }
   
 });

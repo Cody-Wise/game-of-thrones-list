@@ -10,7 +10,7 @@ export async function getHeroes(){
     const response = await client
 
         .from('got_characters')
-        .get('*');
+        .select('*');
 
     return response.body;
 
@@ -22,7 +22,7 @@ export async function getHero(id){
     const response = await client
 
         .from('got_characters')
-        .get('*')
+        .select('*')
         .match({ person_id: id })
 
         .single();
